@@ -8,12 +8,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
 
-module.exports = merge(baseWebpackConfig, {
+const HOST = process.env.HOST
+const PORT = process.env.PORT && Number(process.env.PORT)
+
+const devWebpackConfig = merge(baseWebpackConfig, {
     // mode: 'development',
+    module: {
+        rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: true })
+    },
     output: {
-        filename: '[name].[chunkhash].bundle.js',
-        chunkFilename: '[name].bundle.js',
-        path: path.resolve(__dirname, '../dist'),
+        path: config.build.assetsRoot,
+        filename: '[name].js',
         publicPath: process.env.NODE_ENV === 'production'
             ? config.build.assetsPublicPath
             : config.dev.assetsPublicPath
@@ -43,14 +48,13 @@ module.exports = merge(baseWebpackConfig, {
         }
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
         // new CleanWebpackPlugin(['../dist']),
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: 'index.html',
             inject: true,
-            title: 'Production'
-        }),
+        })
     ]
 });
 module.exports = new Promise((resolve, reject) => {
