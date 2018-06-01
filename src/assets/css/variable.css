@@ -1,0 +1,70 @@
+@charset "utf-8";
+:root {
+  --color-primary: #008fbf;
+/*// #1F2D3D*/
+  --color-success: #5aab5a;
+  --color-warning: #e4c17e;
+  --color-danger: #f65656;
+  --color-info: #8895af;
+  --color-blue: #2e90fe;
+  --color-blue-light: #5da9ff;
+  --color-blue-lighter: rgba(var(--color-blue), 0.12);
+  --color-white: #fff;
+  --color-black: #000;
+  --color-grey: #C0CCDA;
+  --color-secondary: #999;
+  
+  /* 融合色 */
+  --blend-color: #fff;
+
+  /* 背景色(可与主色一致) */
+  --background-color:#fff;
+  /* 大于768下基础字体*/
+  --body-font-family:"Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  --body-font-size:0.875rem;
+  /* 小于768下基础字体*/
+  --spbody-font-family:"Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  --spbody-font-size:0.875rem;
+  /* 基础字体大小,行高，宽度，字体颜色,字体链接色，链接背景颜色  */
+  --base-font-size: 1em;
+  --base-line-height:2em;
+  --base-font-weight:normal;
+  --base-font-color:#333;
+
+  /*************** 背景 ************************/
+
+  /* 背景色 simple configuration */
+  --body-bg-color:var(--background-color);
+
+  /* 背景图片 simple configuration */
+  --body-bg-img: none;
+
+  /* 背景图片展示方式 */
+  --background-repeat:no-repeat;
+  --background-attachment:fixed;
+
+  /* 背景图片对齐方式 */
+  --background-position:center top;
+
+  /***************end 背景 ************************/
+
+  /***************top-banner图片 ************************/
+  --t-banner-color: #0b0b0b;/*PC版的头部banner背景*/
+  --t-banner-pc: none;/*PC版的头部banner*/
+  --t-banner-phone: none;/*手机版的头部banner*/
+  --t-banner-pad: none;/*PAD版的头部banner*/
+  /***************END top-banner图片 ************************/
+  /***************logo图片 ************************/
+  --t-logo:url(../img/logo.png) no-repeat left center;
+  /***************END logo图片 ********************/
+
+  /* 模块外框头部背景颜色*/
+  --mod-color: #fff;
+  /* 面板背景颜色*/
+  --panel-color: #fff;
+ 
+  /*通用内边距 */
+  --inner-padding:1rem;
+  /*通用外边距 */
+  --outer-margin:1rem;
+}
