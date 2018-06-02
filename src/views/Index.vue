@@ -5,7 +5,7 @@
       <app-sidebar></app-sidebar>
       <div class="frame_content" >
         <transition @enter="onEnter" @leave="onLeave">
-          <!--<router-view></router-view>-->
+          <router-view></router-view>
         </transition>
       </div>
     </div>
