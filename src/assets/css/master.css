@@ -1,5 +1,10 @@
 @import url("./variable.css");
-
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 body{
   margin: 0;
   color: var(--base-font-color);
@@ -35,7 +40,8 @@ img {
     -ms-interpolation-mode: bicubic;
     border-style: none;
 }
-.row{max-width: 1044px;}
+.row{max-width: 1044px;margin: 0 auto;}
+.column{padding: 0 0.975rem;}
 .text-right{text-align: right;}
 .text-center{
   text-align: center;
@@ -46,16 +52,15 @@ img {
   z-index: 1000;
   background: var(--t-logo);
   background-size: contain;
-  padding-left: 38px;
+  padding-left: 72px;
   height: 50px;
-  background-size: 28px;
-  display: block;
+  background-size: 60px;
   color: #fff;
-  & span{
-    display: block;
-    height: 100%;
-    background-size: 80px;
-  }
+  display: flex;
+  height: 100%;
+  white-space: nowrap;
+  align-items: center;
+  font-size: 18px;
 }
 .menu {
     margin: 0;
@@ -432,4 +437,9 @@ img {
 }
 .shrink.media-object-section + .media-object-section{
    flex: 1 1 0px;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: space-between;
 }

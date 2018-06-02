@@ -13,7 +13,7 @@
   --color-black: #000;
   --color-grey: #C0CCDA;
   --color-secondary: #999;
-  
+
   /* 融合色 */
   --blend-color: #fff;
 
@@ -55,14 +55,14 @@
   --t-banner-pad: none;/*PAD版的头部banner*/
   /***************END top-banner图片 ************************/
   /***************logo图片 ************************/
-  --t-logo:url(../img/logo.png) no-repeat left center;
+  --t-logo:url(http://imagess-google.com/test/../system/common/other/dafayun.png) no-repeat left center;
   /***************END logo图片 ********************/
 
   /* 模块外框头部背景颜色*/
   --mod-color: #fff;
   /* 面板背景颜色*/
   --panel-color: #fff;
- 
+
   /*通用内边距 */
   --inner-padding:1rem;
   /*通用外边距 */

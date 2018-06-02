@@ -24,7 +24,7 @@ module.exports = {
         new VueLoaderPlugin()
     ],
     resolve: {
-        extensions: ['.js', '.vue'],
+        extensions: ['.js', '.vue', '.json'],
         alias: {
             'vue$': 'vue/dist/vue.esm.js',
             '@': resolve('src')
@@ -45,7 +45,7 @@ module.exports = {
                 test: /\.(png|svg|jpg|gif)$/,
                 loader: 'url-loader',
                 options: {
-                    limit: 10000,
+                    limit: 1000,
                     name: utils.assetsPath('img/[name].[hash:7].[ext]')
                 }
             },

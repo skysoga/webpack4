@@ -1,8 +1,8 @@
 <template>
   <section class="contain">
-    <div class="logo"><a><span></span></a></div>
+    <div class="logo"><a>大发云系统</a></div>
     <div class="login-contain">
-        <h1><a href="">老马识途</a></h1>
+        <h1>登 录</h1>
         <el-form :model="loginForm" ref="loginForm" label-width="0">
           <el-form-item
             prop="acconts"
@@ -20,7 +20,7 @@
           >
             <el-input type="password" v-model="loginForm.password" placeholder="请输入密码..."></el-input>
           </el-form-item>
-          <el-form-item>
+          <el-form-item class="no-margin">
             <el-button class="expanded" type="primary" @click="submitForm('loginForm')">立即登录</el-button>
           </el-form-item>
         </el-form>
@@ -32,10 +32,10 @@
         </div>
       </div>
       <div class="third-party-login">
-          <ul class="row small-up-3 medium-up-3 large-up-3">
-            <li class="column"><i class="fa fa-weixin"></i><a>微信登录</a></li>
-            <li class="column"><i class="fa fa-qq"></i><a>QQ登录</a></li>
-            <li class="column"><i class="fa fa-weibo"></i><a>微博登录</a></li>
+          <ul class="flex-center">
+            <li><i class="fa fa-weixin"></i><a>微信登录</a></li>
+            <li><i class="fa fa-qq"></i><a>QQ登录</a></li>
+            <li><i class="fa fa-weibo"></i><a>微博登录</a></li>
           </ul>
         </div>
       </div>
@@ -83,3 +83,5 @@
     }
   }
 </script>
+<style>
+</style>

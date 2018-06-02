@@ -3,7 +3,7 @@
     <div class="main" role="main" aria-label="主体区块">
       <router-view></router-view>
     </div>
-    <div class="footer login_footer" id="frame_footer">
+    <div class="footer login-footer" id="frame_footer">
         <div class="row" id="data_footer">
             <div class="copyright">
                 © 2016&nbsp;
@@ -25,14 +25,13 @@
 </script>
 <style>
   .contain .logo{
-    max-width: 60px;
     position: absolute;
-    top: 50%;
-    left: 260px;
+    top: 40%;
+    left: 194px;
     margin: -30px 0 0 -30px;
   }
   .login-wrapper {
-    background: url(../../../static/img/bg.png) no-repeat;
+    background: url(../../assets/img/bg.png) no-repeat;
     height: 100vh;
     background-size: 100% 100%;
     &:before {
@@ -70,19 +69,14 @@
     background: #fff;
     padding: 60px 20px 0;
     transform: translateX(0px);
-    -ms-transform: translateX(0px);
-    -moz-transform: translateX(0px);
-    -webkit-transform: translateX(0px);
-    -o-transform: rotate translateX(0px);
     visibility: visible;
     opacity: 1;
     transition: transform .5s,visibility .3s,opacity .5s,height .3s;
 }
 .login-contain form, .register form, .resetPassword form {
-    padding: 0 30px;
+    padding: 0 10px;
 }
-.login-contain h1 a, .register h1 a, .resetPassword h1 a {
-    display: block;
+.login-contain h1, .register h1, .resetPassword h1{
     font-size: 24px;
     color: #8696a1;
     padding: 2px 0 30px 0;
@@ -126,9 +120,21 @@
     position: absolute;
     width: 100%;
     left: 0px;
-    bottom: -10px;
+    bottom: 0;
     padding: 0 10px;
     border-top: 1px solid #ddd;
+}
+.third-party-login ul{
+  margin: 0;
+  & li {
+    list-style: none;
+    padding: 4px 0;
+    flex-grow: 1;
+    text-align: center;
+    & i {
+      margin-right: 4px;
+    }
+  }
 }
 .third-party-login ul li i.fa-weixin {
     color: #28b779;
@@ -142,12 +148,12 @@
 .third-party-login ul li i.fa-weibo {
     color: #ff4200;
 }
-.login_footer {
+.login-footer {
     position: fixed;
     bottom: 0;
     width: 100%;
 }
-.login_footer .copyright {
+.login-footer .copyright {
     float: none;
     text-align: center;
 }

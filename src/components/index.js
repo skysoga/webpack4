@@ -1,12 +1,11 @@
 import Vue from 'vue'
 // import { camelToKebab } from '@/utils'
 // element 组件 + 自定义全局组件
-import { Form, FormItem, Input, Button } from 'element-ui'
+import { Form, FormItem, Input, Button, Menu, Submenu, MenuItem, MenuItemGroup, Tooltip} from 'element-ui'
 
-Vue.use(Form)
-Vue.use(FormItem)
-Vue.use(Input)
-Vue.use(Button)
+const components = { Form, FormItem, Input, Button, Menu, Submenu, MenuItem, MenuItemGroup, Tooltip }
+Object.values(components).forEach(i => Vue.use(i))
+
 // export default {
 //   install (Vue, opts = {}) {
 //     // Object.values(components).forEach(comp => Vue.component(comp.name, comp))
